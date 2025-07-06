@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - SIP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+  <img src="assets/logo.png" alt="Logo SIP" class="logo left" />
+
+  <nav class="main-nav">
+    <h1><p class="tagline">Faites confiance à SIP, votre partenaire de proximité en solutions informatiques professionnelles.</p></h1>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="services.html">Services</a>
+    <a href="projets.html">Projets</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <img src="assets/logo.png" alt="Logo SIP" class="logo right" />
+</header>
+
+  <main class="contact">
+    <h1>Nous contacter</h1>
+    <p class="intro">Vous avez une question, un projet ou besoin d'assistance ? N'hésitez pas à nous écrire via le formulaire ci-dessous ou à nous contacter directement.</p>
+
+    <div class="contact-wrapper">
+      <form class="contact-form" onsubmit="return validateForm()">
+        <input type="text" name="name" placeholder="Votre nom" required />
+        <input type="email" name="email" placeholder="Votre email" required />
+        <input type="text" name="subject" placeholder="Sujet" />
+        <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+
+      <div class="contact-info">
+        <h2>Coordonnées</h2>
+        <p><strong>Email :</strong> nguetsopjiogo@gmail.com</p>
+        <p><strong>Téléphone :</strong> +242 04 411 54 34</p>
+        <p><strong>Adresse :</strong> Avenue Jacque OPANGAULT, Pointe noire, Republique du Congo</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 SIP - Tous droits réservés</p>
+  </footer>
+
+  <script>
+    function validateForm() {
+      const form = document.querySelector('.contact-form');
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      if (!name || !email || !message) {
+        alert('Merci de remplir tous les champs obligatoires.');
+        return false;
+      }
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert('Adresse email invalide.');
+        return false;
+      }
+
+      alert('Message envoyé avec succès !');
+      return false; // Pour éviter l'envoi réel (simulation)
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

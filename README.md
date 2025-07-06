@@ -1,1 +1,3 @@
-[README.md](https://github.com/user-attachments/files/21092550/README.md)
+# Mon site personnel
+
+Site HTML statique prêt à être hébergé sur GitHub Pages.
